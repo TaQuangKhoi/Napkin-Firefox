@@ -93,10 +93,6 @@
     font-family: 'Amiri Regular'
 }
 
-.code {
-    margin-top: 2.2em !important
-}
-
 .txt2 {
     width: 12em !important;
     margin-top: 1.45em !important;
@@ -122,7 +118,13 @@ body {
     -moz-osx-font-smoothing: grayscale
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace
+form {
+    margin: 0
+}
+
+input {
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit
 }
