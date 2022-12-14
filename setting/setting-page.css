@@ -24,7 +24,7 @@
     color: #61dafb
 }
 
-.boxmain {
+.box-main {
     width: 100% !important;
     height: 100% !important;
     background-image: url(../assets/background.png);
@@ -39,14 +39,21 @@
 }
 
 .btn {
-    background-color: black !important;
-    color: white !important;
-    height: 1.8rem !important;
-    border-radius: 3px !important;
-    font-weight: bold !important;
-    font-size: 18px !important;
-    margin-top: 1.05em !important;
-    letter-spacing: 0.2em
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 5px;
 }
 
 .txt {
@@ -65,11 +72,6 @@
     font-family: 'Amiri Regular'
 }
 
-.input:focus {
-    border-color: black !important;
-    box-shadow: none !important
-}
-
 .input::placeholder {
     color: #505050 !important
 }
@@ -83,7 +85,7 @@
     transform: translate(-50%, -50%)
 }
 
-.box2 {
+.footer {
     height: 40px;
     position: fixed;
     letter-spacing: 0.01em;
@@ -124,7 +126,23 @@ form {
 
 input {
     display: block;
+    margin-left: auto;
+    margin-right: auto;
     font-family: inherit;
     font-size: inherit;
-    line-height: inherit
+    line-height: inherit;
+    /*    No border and underline */
+    border: none;
+    border-bottom: 1px solid #505050;
+    background: none;
+    outline: none;
+    color: inherit;
+    padding: 7px 0;
+    transition: border-color 0.2s;
+}
+
+p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
