@@ -34,15 +34,11 @@
     position: fixed
 }
 
-.testing {
-    background-image: url(../assets/background.png)
-}
-
 .btn {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
+    margin-top: 20px;
     border: none;
     border-radius: 5px;
     background-color: #000000;
@@ -61,14 +57,6 @@
     letter-spacing: 0.01em;
     margin-top: 2.8em !important;
     font-size: 18px !important;
-    font-family: 'Amiri Regular'
-}
-
-.input {
-    width: auto !important;
-    border-color: black !important;
-    text-align: center;
-    margin-top: 2.2em !important;
     font-family: 'Amiri Regular'
 }
 
@@ -107,13 +95,9 @@
     text-align: -webkit-center
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: red
-}
-
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: -apple-system, BlinkMacSystemFont, 'Amiri Regular', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -128,9 +112,11 @@ input {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 15em !important;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    text-align: center;
     /*    No border and underline */
     border: none;
     border-bottom: 1px solid #505050;
@@ -145,4 +131,54 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+/*** TOASTE SNACKBAR ***/
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+     from {bottom: 30px; opacity: 1;}
+     to {bottom: 0; opacity: 0;
+    }
 }
